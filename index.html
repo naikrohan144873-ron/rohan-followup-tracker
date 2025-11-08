@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rohan's Follow Up Tracker</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="h-title">Rohan's Follow Up Tracker</div>
+      <div class="h-actions">
+        <button id="openSettings" class="icon">⚙️</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <input id="searchInput" class="search" placeholder="Search by name / project / department" />
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Today's Tasks</div>
+          <div id="todayCount" class="card-number">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Pending Tasks</div>
+          <div id="pendingCount" class="card-number">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Completed</div>
+          <div id="completedCount" class="card-number">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Overdue</div>
+          <div id="overdueCount" class="card-number">0</div>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <select id="filterCompany" class="filter"><option value="">All Projects</option></select>
+        <select id="filterDept" class="filter"><option value="">All Departments</option></select>
+      </div>
+      <div class="filters-row">
+        <select id="filterStatus" class="filter"><option value="">All Statuses</option><option>Pending</option><option>In Progress</option><option>Completed</option></select>
+        <input id="filterDate" class="filter" type="date" />
+      </div>
+
+      <div id="taskSection" class="list-area">
+        <div class="small">No tasks found.</div>
+      </div>
+    </div>
+
+    <div class="fab">
+      <button id="addBtn" class="big-btn">+ Add Follow-Up</button>
+      <button id="navList" class="link">List</button>
+      <button id="navAbout" class="link">About</button>
+    </div>
+
+  </div>
+
+  <div id="modalRoot"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
