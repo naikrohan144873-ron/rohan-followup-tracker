@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Add Follow-Up</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <button id="back" class="icon">←</button>
+      <div class="h-title">Add Follow-Up</div>
+    </div>
+
+    <div class="container">
+      <form id="followUpForm" class="form">
+        <label>Project
+          <select id="company" class="input">
+            <option value="">Select Project</option>
+          </select>
+          <button type="button" id="newProjectBtn" class="small-link">+ New Project</button>
+        </label>
+
+        <label>Department
+          <select id="department" class="input">
+            <option value="">Select Department</option>
+          </select>
+          <button type="button" id="newDeptBtn" class="small-link">+ New Department</button>
+        </label>
+
+        <label>Person Name
+          <input id="personName" class="input" type="text" placeholder="Enter name" />
+        </label>
+
+        <div class="row">
+          <label style="flex:1">Follow-up Date
+            <input id="followDate" class="input" type="date" />
+          </label>
+          <label style="flex:1">Follow-up Time
+            <input id="followTime" class="input" type="time" />
+          </label>
+        </div>
+
+        <label>Status
+          <select id="status" class="input">
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+          </select>
+        </label>
+
+        <label>Notes
+          <textarea id="notes" class="input" placeholder="Add any details..."></textarea>
+        </label>
+
+        <div class="row" style="gap:12px;">
+          <button id="saveBtn" class="primary" type="submit">Save</button>
+          <button id="cancel" type="button" class="btn btn-danger">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
